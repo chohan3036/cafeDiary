@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "931131057637",
+    "firebase_url": "https://caffo-project.firebaseio.com",
+    "project_id": "caffo-project",
+    "storage_bucket": "caffo-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931131057637:android:20b5b6a61416b074c67b0c",
+        "android_client_info": {
+          "package_name": "com.example.caffo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931131057637-bedvtj9thmm0g9ouvii2jh2sbfndf4jj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy7rDzL5l1pn5O6zdWn_WMyqiBgap0KpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931131057637-bedvtj9thmm0g9ouvii2jh2sbfndf4jj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
