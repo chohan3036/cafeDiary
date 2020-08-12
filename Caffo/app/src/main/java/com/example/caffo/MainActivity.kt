@@ -1,33 +1,39 @@
 package com.example.caffo
 
-import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.View
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import com.example.caffo.navigation.*
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_grid.*
-import java.util.jar.Manifest
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
+import com.example.caffo.tab.*
+import kotlinx.android.synthetic.main.fragment_diary.*
 
 class MainActivity : AppCompatActivity() {
+    var NUM_PAGES = 2
+    lateinit var feedViewPager : ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var gridFragment = GridFragment()
-        supportFragmentManager.beginTransaction().add(R.id.grid_feed, gridFragment).commit()
+        feedViewPager = findViewById(R.id.main_viewpager)
+        var pagerAdapter = FeedViewPagerAdapter(this)
+        feedViewPager.adapter = pagerAdapter
 
         ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)
+    }
+
+    inner class FeedViewPagerAdapter (fa : FragmentActivity) : FragmentStateAdapter(fa) {
+        override fun createFragment(position: Int): Fragment {
+            return when (position) {
+                0 -> FeedFragment()
+                else -> DiaryFragment()
+            }
+        }
+        override fun getItemCount(): Int = NUM_PAGES
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -47,7 +53,5 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }
     }
-
-
 
 }
