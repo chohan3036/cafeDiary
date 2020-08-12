@@ -26,9 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginRight="20dp"
+            app:errorEnabled="true">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,9 +40,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginRight="20dp"
+            app:errorEnabled="true">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:inputType="textPassword"
                 android:id="@+id/password_edittext"
                 android:layout_width="match_parent"
@@ -82,15 +84,5 @@
             android:theme="@style/ButtonStyle" />
 
     </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/slide_email_signup"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:orientation="vertical"
-        android:background="#000000"
-        android:layout_alignParentBottom="true">
-
-    </FrameLayout>
 
 </RelativeLayout>

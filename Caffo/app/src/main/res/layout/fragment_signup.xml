@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
 
     <LinearLayout
         android:id="@+id/signin_layout"
@@ -19,7 +20,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +33,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:inputType="textPassword"
                 android:id="@+id/password_edittext"
                 android:layout_width="match_parent"

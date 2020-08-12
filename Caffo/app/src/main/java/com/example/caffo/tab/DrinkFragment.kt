@@ -1,4 +1,4 @@
-package com.example.caffo.navigation
+package com.example.caffo.tab
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.caffo.R
 
-class AlarmFragment : Fragment(){
+class DrinkFragment : Fragment () {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_alarm, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_drink, container, false)
     }
 }

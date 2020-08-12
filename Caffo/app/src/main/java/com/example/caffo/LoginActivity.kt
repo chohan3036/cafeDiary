@@ -1,20 +1,12 @@
 package com.example.caffo
 
 import android.content.Intent
-import android.graphics.drawable.Animatable
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.*
-import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.caffo.login.SignUpFragment
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.*
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
@@ -41,9 +33,11 @@ class LoginActivity : AppCompatActivity() {
         }
         email_signup_button.setOnClickListener {
             var signUpFragment = SignUpFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.signin_layout, signUpFragment).commit()
-            signin_layout.visibility = View.VISIBLE
+            var transaction = supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_up, R.anim.slide_in_down, R.anim.slide_out_down, R.anim.slide_out_up)
+            transaction.replace(R.id.login_content, signUpFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
         var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
