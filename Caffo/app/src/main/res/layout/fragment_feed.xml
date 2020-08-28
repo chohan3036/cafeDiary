@@ -90,6 +90,31 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <TextView
+                    android:text="text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
             </LinearLayout>
         </RelativeLayout>
     </com.example.caffo.CustomScrollView>
