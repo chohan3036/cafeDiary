@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
-        android:id="@+id/toolbar"
+    <FrameLayout
+        android:background="@color/colorAccent"
+        android:id="@+id/custom_drink_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/category_picker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/toolbar">
+        android:layout_height="350dp">
 
         <ImageView
-            android:src="@drawable/logo_title"
-            android:id="@+id/drink_edit_iv"
-            android:layout_width="300dp"
-            android:layout_height="300dp"/>
-    </LinearLayout>
+            android:src="@drawable/test_coster"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="87dp"
+            android:layout_gravity="center"/>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
+        <ImageView
+            android:src="@drawable/test_drink"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:src="@drawable/test_straw_all"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:src="@drawable/test_cup"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:src="@drawable/test_straw_top"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="31dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </FrameLayout>
+
+    <com.example.caffo.NestedScrollableHost
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_below="@id/category_picker">
+        android:layout_below="@id/custom_drink_view">
 
-    </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tab_layout"
-        android:layout_margin="30dp">
+    </com.example.caffo.NestedScrollableHost>
 
-    </androidx.viewpager2.widget.ViewPager2>
 
 </RelativeLayout>

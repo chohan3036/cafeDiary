@@ -3,6 +3,8 @@ package com.example.caffo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.HorizontalScrollView
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -13,20 +15,20 @@ import kotlinx.android.synthetic.main.fragment_diary.*
 
 class MainActivity : AppCompatActivity() {
     var NUM_PAGES = 2
-    lateinit var feedViewPager : ViewPager2
+    lateinit var mainViewPager : ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        feedViewPager = findViewById(R.id.main_viewpager)
-        var pagerAdapter = FeedViewPagerAdapter(this)
-        feedViewPager.adapter = pagerAdapter
+        mainViewPager = findViewById(R.id.main_viewpager)
+        var pagerAdapter = MainViewPagerAdapter(this)
+        mainViewPager.adapter = pagerAdapter
 
         ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)
     }
 
-    inner class FeedViewPagerAdapter (fa : FragmentActivity) : FragmentStateAdapter(fa) {
+    inner class MainViewPagerAdapter (fa : FragmentActivity) : FragmentStateAdapter(fa) {
         override fun createFragment(position: Int): Fragment {
             return when (position) {
                 0 -> FeedFragment()

@@ -18,7 +18,8 @@ tabLayout과 viewPager2 구현하는 거..
 뷰페이저가 포함된 액티비티에 어답터 구현함
 나는 각 페이지에 fragment 띄울거라 FragmentStateAdapter 상속 받아서 붙여줌!!
 creatFragment에서는 position에 따라 구현해놓은 fragment 배정해줌
-이러고 난 후에 tabLayout은 그냥 변수 선언해서 TabLayoutMediator에다가 각각 탭 레이아웃이랑 뷰페이저 id 넣어주면 됨 끗
+이러고 난 후에 tabLayout은 그냥 변수 선언해서 
+TabLayoutMediator에다가 각각 탭 레이아웃이랑 뷰페이저 id 넣어주면 됨 끗
 아 근데 이거 쓰면 xml에 만들어놓은 아이템 다 날아가니까 구현해놓을 필용 ㅓㅇㅄ음
 
 -200812

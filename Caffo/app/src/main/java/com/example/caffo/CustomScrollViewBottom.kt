@@ -7,7 +7,7 @@ import android.view.ViewTreeObserver
 import android.widget.ScrollView
 import kotlinx.android.synthetic.main.fragment_feed.view.*
 
-class CustomScrollView : ScrollView, ViewTreeObserver.OnGlobalLayoutListener {
+class CustomScrollViewBottom : ScrollView, ViewTreeObserver.OnGlobalLayoutListener {
     constructor(context: Context) : this(context, null, 0)
     constructor(context: Context, attr: AttributeSet?) : this(context, attr, 0)
     constructor(context: Context, attr: AttributeSet?, defStyleAttr: Int) : super(context, attr, defStyleAttr) {

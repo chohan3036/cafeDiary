@@ -43,22 +43,10 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/smaller_header"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#40AACF"
-                android:padding="48dp"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/main_header"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/colorPrimary"
-                android:layout_below="@+id/smaller_header">
-
+                android:background="@color/colorPrimary">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -71,10 +59,20 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/smaller_header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#40AACF"
+                android:padding="48dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/main_header">
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/main_header"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_below="@+id/smaller_header">
 
                 <ImageView
                     android:src="@drawable/ic_arrow_back"

@@ -58,9 +58,8 @@ class FeedFragment : Fragment() {
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-            // 화면 넓이의 1/3 크기의 정사각형 만들기
+            // 화면 넓이의 1/2 크기의 정사각형 만들기
             var width = resources.displayMetrics.widthPixels / 2
-
             var imageview = ImageView(parent.context)
             imageview.layoutParams = LinearLayoutCompat.LayoutParams(width, width)
             return CustomViewHolder(imageview)
