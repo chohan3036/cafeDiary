@@ -1,1 +1,3 @@
-# cafeDiary
+# Caffo Project
+## Keeping a diary with this APP (especially about caffe)
+## still working...
